@@ -30,7 +30,7 @@ export default function Pricing() {
           <p>Cardio program</p>
           <p>Stretch program</p>
           <p>Weekly check ins</p>
-          <button>Reserve time</button>
+          <button>View all plans</button>
         </div>
 
         <div className="price-card">
@@ -44,7 +44,7 @@ export default function Pricing() {
           <p>Cardio program</p>
           <p>Stretch program</p>
           <p>Monthly Assessment</p>
-          <button>Reserve time</button>
+          <button>View all plans</button>
         </div>
       </div>
     </>

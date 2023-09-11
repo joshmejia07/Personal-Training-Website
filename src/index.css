@@ -19,6 +19,7 @@ a,
 h1,
 h3,
 h4,
+h5,
 button {
   text-decoration: none;
   text-transform: uppercase;
@@ -119,7 +120,7 @@ button {
   margin-bottom: 15px;
 }
 
-.squat-rack-img {
+.section-img {
   object-fit: cover;
   width: 380px;
   height: 380px;
@@ -147,7 +148,6 @@ button {
 }
 
 .grid-container {
-  /* height: 400px; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   color: #eaa91d;
@@ -172,7 +172,9 @@ button {
 }
 
 /* PRICING SECTION */
-.pricing-title {
+
+.pricing-title,
+.products-title {
   text-align: center;
   margin-top: 4rem;
   margin-bottom: 2rem;
@@ -214,4 +216,26 @@ span {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+/* PRODUCTS SECTION */
+
+.products-container {
+  background-color: #f8f8f8;
+}
+
+.product-img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+.products-grid {
+  width: 380px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  justify-items: center;
+  gap: 1rem 0px;
 }

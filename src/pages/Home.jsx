@@ -4,6 +4,8 @@ import Intro from "./Intro"
 import Programs from "./Programs"
 import Pricing from "./Pricing"
 import Banner from "./Banner"
+import Success from "./Success"
+import Products from "./Products"
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <Programs />
       <Pricing />
       <Banner />
+      <Success />
+      <Products />
     </>
   )
 }
