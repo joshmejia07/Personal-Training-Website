@@ -6,6 +6,7 @@ import Pricing from "./Pricing"
 import Banner from "./Banner"
 import Success from "./Success"
 import Products from "./Products"
+import Contact from "./Contact"
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Banner />
       <Success />
       <Products />
+      <Contact />
     </>
   )
 }

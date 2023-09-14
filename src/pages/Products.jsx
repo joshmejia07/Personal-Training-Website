@@ -1,6 +1,7 @@
 import lacrosseBall from "../assets/images/lacrosse-ball.jpg"
 import jumpRope from "../assets/images/jump-rope.jpg"
 import protein from "../assets/images/protein-powder.jpg"
+import preWorkout from "../assets/images/pre-workout.jpg"
 import { IoMdCart } from "react-icons/io"
 
 export default function Products() {
@@ -19,35 +20,35 @@ export default function Products() {
           <img className="product-img" src={lacrosseBall} alt="Lacrosse ball" />
           <h5>Lacrosse Ball</h5>
           <p>$10</p>
-          <button className="product-btn">
+          {/* <button className="product-btn">
             <IoMdCart /> Add to cart
-          </button>
+          </button> */}
         </div>
 
         <div className="products-grid-item">
           <img className="product-img" src={jumpRope} alt="Jump Rope" />
           <h5>Jump Rope</h5>
           <p>$15</p>
-          <button className="product-btn">
+          {/* <button className="product-btn"> 
             <IoMdCart /> Add to cart
-          </button>
+          </button> */}
         </div>
         <div className="products-grid-item">
           <img className="product-img" src={protein} alt="Protein Powder" />
           <h5>Protein Powder</h5>
           <p>$50</p>
-          <button className="product-btn">
+          {/* <button className="product-btn">
             <IoMdCart /> Add to cart
-          </button>
+          </button> */}
         </div>
 
         <div className="products-grid-item">
-          <img className="product-img" src={jumpRope} alt="Lacrosse ball" />
-          <h5>Jump Rope</h5>
-          <p>$15</p>
-          <button className="product-btn">
+          <img className="product-img" src={preWorkout} alt="Pre-Workout" />
+          <h5>Pre-Workout</h5>
+          <p>$30</p>
+          {/* <button className="product-btn">
             <IoMdCart /> Add to cart
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
