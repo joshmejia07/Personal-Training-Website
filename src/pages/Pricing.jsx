@@ -16,6 +16,9 @@ export default function Pricing() {
           <p>1 hour skype meeting</p>
           <p>6 week workout plan</p>
           <p>Nutritional plan</p>
+          <p>Cardio Program</p>
+          <p>Stretch Program</p>
+          <p>Weekly Check-ins</p>
           <button>Reserve time</button>
         </div>
 

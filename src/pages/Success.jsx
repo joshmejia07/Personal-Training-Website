@@ -3,7 +3,7 @@ import joshSuccess from "../assets/images/josh-success.jpg"
 export default function Success() {
   return (
     <section className="split-container">
-      <h4 className="section-statement">The end result</h4>
+      <h4 className="section-statement">Get Results</h4>
       <h1>Success Stories</h1>
       <hr className="left" />
       <p className="opening-paragraph">
