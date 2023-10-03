@@ -320,6 +320,13 @@ span {
   gap: 1rem 0px;
 }
 
+.product-link {
+  color: #101013;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 /* CONTACT SECTION */
 .contact-container {
   color: #fff;

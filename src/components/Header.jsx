@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { IoMenuOutline } from "react-icons/io5"
 import { AiOutlineShopping, AiOutlineClose } from "react-icons/ai"
 
@@ -13,10 +13,18 @@ export default function Header() {
       <div className={toggle ? "menu active" : "menu"}>
         <AiOutlineClose className="close-btn" onClick={showMenu} />
         <div className="menu-el">
-          <Link className="nav-links">Home</Link>
-          <Link className="nav-links">About</Link>
-          <Link className="nav-links">Programs</Link>
-          <Link className="nav-links">Shop</Link>
+          <NavLink to="/" className="nav-links" onClick={showMenu}>
+            Home
+          </NavLink>
+          <NavLink to="/programs" className="nav-links" onClick={showMenu}>
+            Programs
+          </NavLink>
+          <NavLink to="/shop" className="nav-links" onClick={showMenu}>
+            Shop
+          </NavLink>
+          <NavLink to="" className="nav-links" onClick={showMenu}>
+            Contact
+          </NavLink>
         </div>
       </div>
     )
