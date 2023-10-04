@@ -62,7 +62,7 @@ hr.center {
 /* HEADER */
 
 header {
-  background-color: #fff;
+  background-color: #1e1e1e;
   width: 100%;
   display: flex;
   padding: 10px;
@@ -71,11 +71,12 @@ header {
   gap: 1rem;
   position: fixed;
   top: 0;
+  z-index: 100;
 }
 
 header .site-logo {
   margin-right: auto;
-  color: #1e1e1e;
+  color: #fff;
   font-size: 25px;
   font-family: "Karla";
 }
@@ -85,18 +86,18 @@ header .nav-links {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  color: #1e1e1e;
+  color: #fff;
   font-size: 0.6rem;
 }
 
 header .menu-btn {
-  color: #2e2e2e;
+  color: #fff;
   width: 2rem;
   height: 2rem;
 }
 
 header .shop-btn {
-  color: #2e2e2e;
+  color: #fff;
   width: 1.5rem;
   height: 1.5rem;
 }
@@ -113,6 +114,7 @@ header .shop-btn {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 150;
 }
 
 .menu.active {

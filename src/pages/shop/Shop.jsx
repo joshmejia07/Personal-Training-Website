@@ -1,12 +1,11 @@
 import productData from "../../data.js"
 import "../../shop.css"
-import { Link, NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { BsStarFill } from "react-icons/bs"
 
 export default function Shop() {
   const products = productData.map(product => {
-    const { brand, category, description, img, id, price, productName } =
-      product
+    const { brand, img, id, price, productName } = product
 
     return (
       <div key={id} className="product-container">
