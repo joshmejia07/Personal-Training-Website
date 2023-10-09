@@ -1,6 +1,7 @@
 .container {
-  margin-top: 4rem;
   text-align: start;
+  width: 23rem;
+  margin: 4.5rem auto auto auto;
 }
 
 .card {

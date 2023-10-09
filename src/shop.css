@@ -124,3 +124,9 @@ a {
   padding: 1.2rem;
   font-weight: 700;
 }
+
+.shop-link {
+  text-decoration: underline;
+  text-transform: none;
+  font-weight: 600;
+}

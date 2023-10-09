@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { Link, NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
+import { HashLink } from "react-router-hash-link"
 import { IoMenuOutline } from "react-icons/io5"
 import { AiOutlineShopping, AiOutlineClose } from "react-icons/ai"
 
@@ -13,18 +14,18 @@ export default function Header() {
       <div className={toggle ? "menu active" : "menu"}>
         <AiOutlineClose className="close-btn" onClick={showMenu} />
         <div className="menu-el">
-          <NavLink to="/" className="nav-links" onClick={showMenu}>
+          <Link to="/" className="nav-links" onClick={showMenu}>
             Home
-          </NavLink>
-          <NavLink to="/programs" className="nav-links" onClick={showMenu}>
+          </Link>
+          <Link to="/programs" className="nav-links" onClick={showMenu}>
             Programs
-          </NavLink>
-          <NavLink to="/shop" className="nav-links" onClick={showMenu}>
+          </Link>
+          <Link to="/shop" className="nav-links" onClick={showMenu}>
             Shop
-          </NavLink>
-          <NavLink to="" className="nav-links" onClick={showMenu}>
+          </Link>
+          <HashLink to="#contact" className="nav-links" onClick={showMenu}>
             Contact
-          </NavLink>
+          </HashLink>
         </div>
       </div>
     )
@@ -33,7 +34,13 @@ export default function Header() {
   return (
     <>
       <header>
-        <Link to="/" className="site-logo">
+        <Link
+          to="/"
+          className="site-logo"
+          onClick={() => {
+            window.scrollTo(0, 0)
+          }}
+        >
           JXM
         </Link>
         <Link to="#">

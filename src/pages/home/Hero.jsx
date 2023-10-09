@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Hero() {
   return (
     <div className="hero-img">
@@ -9,7 +11,9 @@ export default function Hero() {
           Over twelve years experience in personal training, nutritional
           coaching and fitness education.
         </p>
-        <button>See Programs</button>
+        <Link to="/programs">
+          <button>See Programs</button>
+        </Link>
       </div>
     </div>
   )

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 import data from "../../data"
+import { Link } from "react-router-dom"
 
 export default function Product() {
   const [quantity, setQuantity] = useState(1)
@@ -16,7 +17,10 @@ export default function Product() {
   }
 
   return (
-    <div className="page-container">
+    <div className="page-container margin-top">
+      <Link to="/shop" className="shop-link">
+        Back to shop
+      </Link>
       <img src={item.img} className="product-page-img" />
       <h1>{item.productName}</h1>
       <h4>{item.brand}</h4>

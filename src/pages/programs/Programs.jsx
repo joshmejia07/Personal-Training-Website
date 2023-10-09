@@ -29,9 +29,9 @@ export default function Programs() {
   })
   return (
     <div className="container">
-      <h4>Change starts here</h4>
+      <h4 className="section-statement">Change starts here</h4>
       <h1>Programs</h1>
-      <hr className="center" />
+      <hr className="left" />
       <p>
         Welcome to our signature programs. Carefully designed to accommodate all
         fitness levels and backgrounds. Transform your life with confidence by
