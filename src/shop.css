@@ -33,18 +33,17 @@ a {
 .shop-hero {
   background-image: linear-gradient(
       to left,
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
     ),
-    url(./assets/images/shop-bg.jpg);
+    url(./assets/images/product-hero.jpg);
   background-size: cover;
   height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   color: #fff;
-  margin-top: 3rem;
 }
 
 .shop-img {
@@ -62,6 +61,22 @@ a {
   align-items: center;
   text-align: center;
   gap: 1rem 0px;
+}
+
+.category-filter-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav-filter-link {
+  font-weight: 400;
+  text-transform: none;
+}
+
+.active-link {
+  font-weight: 600;
+  color: #101013;
 }
 
 .product-container {

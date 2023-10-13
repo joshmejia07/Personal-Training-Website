@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { HashLink } from "react-router-hash-link"
 import { IoMenuOutline } from "react-icons/io5"
 import { AiOutlineShopping, AiOutlineClose } from "react-icons/ai"
 
@@ -23,9 +22,9 @@ export default function Header() {
           <Link to="/shop" className="nav-links" onClick={showMenu}>
             Shop
           </Link>
-          <HashLink to="#contact" className="nav-links" onClick={showMenu}>
+          <Link to="#contact" className="nav-links" onClick={showMenu}>
             Contact
-          </HashLink>
+          </Link>
         </div>
       </div>
     )
@@ -43,7 +42,7 @@ export default function Header() {
         >
           JXM
         </Link>
-        <Link to="#">
+        <Link to="cart">
           <AiOutlineShopping className="shop-btn" />
         </Link>
         <Link to="#">

@@ -3,17 +3,26 @@ import { useParams } from "react-router-dom"
 import data from "../../data"
 import { Link } from "react-router-dom"
 
-export default function Product() {
-  const [quantity, setQuantity] = useState(1)
+export default function Product({ addItemToCart }) {
   const params = useParams()
   const item = data.find(item => item.id === parseInt(params.id))
 
+  const [cartItem, setCartItem] = useState(item)
+
   function incrementCount() {
-    setQuantity(prev => prev + 1)
+    const updatedItem = { ...item, quantity: cartItem.quantity + 1 }
+    setCartItem(updatedItem)
   }
 
   function decrementCount() {
-    setQuantity(prev => (prev >= 2 ? prev - 1 : (prev = 1)))
+    const updatedItem =
+      cartItem.quantity >= 2
+        ? {
+            ...item,
+            quantity: cartItem.quantity - 1,
+          }
+        : item
+    setCartItem(updatedItem)
   }
 
   return (
@@ -32,13 +41,15 @@ export default function Product() {
           <button className="quant-btn" onClick={decrementCount}>
             -
           </button>
-          <span className="count">{quantity}</span>
+          <span className="count">{cartItem.quantity}</span>
           <button className="quant-btn" onClick={incrementCount}>
             +
           </button>
         </div>
       </div>
-      <button className="add-cart-btn">Add to cart</button>
+      <button className="add-cart-btn" onClick={() => addItemToCart(cartItem)}>
+        Add to cart
+      </button>
       <p style={{ fontWeight: "bold" }}>Description</p>
       <p>{item.description}</p>
     </div>

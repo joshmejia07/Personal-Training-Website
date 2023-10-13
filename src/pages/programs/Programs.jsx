@@ -41,13 +41,3 @@ export default function Programs() {
     </div>
   )
 }
-
-{
-  /* <div
-          className="card-img"
-          style={{
-            backgroundImage: `url(${img})`,
-            backgroundSize: "cover",
-          }}
-        ></div> */
-}

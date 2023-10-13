@@ -24,6 +24,7 @@ const productData = [
     description:
       "Naked Whey is sourced from small Northern California and Idaho dairy farms. Our cows are grass-fed, free roaming, and raised without growth hormones like rBGH or rBST. Each serving includes 25 grams of protein and 5.9 grams of branched-chain amino acids (BCAAs). Naked Whey is completely free of additives and artificial sweeteners. We are committed to shortening the steps between our farms and you. Don't let the supplement industry fool you; additives are for their bottom line, not your health.",
     availability: true,
+    quantity: 1,
   },
   {
     id: 2,
@@ -35,6 +36,7 @@ const productData = [
     description:
       "Naked Pea has only one ingredient: Pea protein extracted from yellow split peas grown on US and Canadian farms. Pea protein is easily absorbed by the body, making it an excellent plant-based alternative to whey protein. Naked Pea is free of additives and artificial sweeteners. We are committed to shortening the steps between our farms and you. Independent third-party tested for heavy metals. Don't let the supplement industry fool you; additives are for their bottom line, not your health.",
     availability: true,
+    quantity: 1,
   },
   {
     id: 3,
@@ -46,6 +48,7 @@ const productData = [
     description:
       "Creatine is a naturally occurring energy source that your body uses in periods of stress or exertion to fight off muscle fatigue and increase endurance and anaerobic capacity. Creatine Monohydrate acts as a muscle cell volumizer, leading to increased anabolism and muscle protein synthesis. Increasing creatine levels in the body through supplementation allows for improved ATP regeneration within your muscles and acts as a supply of power on demand for you during intense exercise training. With creatine monohydrate as a source of fast, available energy, glycolysis (the metabolic breakdown of glucose into energy) decreases, which in turn reduces lactic acid build-up in muscle and leads to increased endurance and strength.",
     availability: true,
+    quantity: 1,
   },
   {
     id: 4,
@@ -57,6 +60,7 @@ const productData = [
     description:
       "PurCaf® Organic caffeine capsules will support your energy, focus, and endurance.* We use PurCaf® caffeine because it comes from 100% organic green coffee beans for efficient absorption and a clean caffeine rush.",
     availability: true,
+    quantity: 1,
   },
   {
     id: 5,
@@ -68,6 +72,7 @@ const productData = [
     description:
       "The whole-food multivitamin with 21 essential vitamins and minerals. It's sourced from organic fruits and vegetables, so you can actually absorb the key micronutrients. Bioavailable, properly dosed, and with prebiotic fibers to cover your nutritional bases.",
     availability: true,
+    quantity: 1,
   },
   {
     id: 6,
@@ -79,6 +84,7 @@ const productData = [
     description:
       "Formulated with a super greens blend of 50+ vitamin-containing ingredients, Primal Greens powder makes getting your daily serving of energy-supporting nutrients both convenient and enjoyable!",
     availability: true,
+    quantity: 1,
   },
   {
     id: 7,
@@ -90,6 +96,7 @@ const productData = [
     description:
       "Our most versatile jump rope yet! With a removable weight in the handle, you can build endurance & muscle while you jump or remove the weight to focus on coordination & stamina without missing a beat. The Pro Jump Rope puts the choice literally in your hands.",
     availability: true,
+    quantity: 1,
   },
   {
     id: 8,
@@ -101,6 +108,7 @@ const productData = [
     description:
       "Balance out your training. Improve core strength, overall balance, and—yes—even your posture by adding our TRX® Stabiilty Ball to any workout.",
     availability: true,
+    quantity: 1,
   },
   {
     id: 9,
@@ -112,6 +120,7 @@ const productData = [
     description:
       "The Bosu balance trainer is a staple in gyms, physical therapy offices, and homes across the globe. You know and love the Blue Bosu but now we've produced a limited number of Matte Black home Balance trainers. Same functionality as the original balance trainer but with a sleek, modern, updated look. The Bosu black balance trainer features textured dome material so hands and feet won't slip",
     availability: true,
+    quantity: 1,
   },
   {
     id: 10,
@@ -123,6 +132,7 @@ const productData = [
     description:
       "These blue suspension trainer straps are the toughest and most durable suspension system worldwide to withstand 24/7 commercial club or gym use.",
     availability: true,
+    quantity: 1,
   },
   {
     id: 11,
@@ -134,6 +144,7 @@ const productData = [
     description:
       "Sensibly designed for yoga, pilates, home workouts, strength training and rehabilitation. Made with premium, woven fabric elastic. Includes 3x increasingly resistant fabric bands and a nifty carrying case. Strength Levels: Heavy, Medium, Light",
     availability: true,
+    quantity: 1,
   },
   {
     id: 12,
@@ -145,6 +156,7 @@ const productData = [
     description:
       "If there’s one thing you should implement to increase mobility, it’s a lacrosse ball. It’s great for breaking up muscle knots and hard to reach trigger points. Use the Lacrosse ball on your traps and delts after a heavy upper body workout or on glutes and calves after a long run.",
     availability: true,
+    quantity: 1,
   },
   {
     id: 13,
@@ -156,6 +168,7 @@ const productData = [
     description:
       "Prevent injury and relieve sore muscles with the TriggerPoint GRID Foam Roller. The TriggerPoint GRID Foam Roller features environmentally friendly technology while maintaining durability. With this TriggerPoint foam roller, you'll be able to target sore muscles in order to relieve aches and pains. Plus, the compact design makes it ideal for traveling. Whether you need to improve muscle recovery or work out muscle knots, try the TriggerPoint GRID Foam Roller.",
     availability: true,
+    quantity: 1,
   },
   {
     id: 14,
@@ -167,6 +180,7 @@ const productData = [
     description:
       "Infused with powerful plant compounds and stem cells that relieve pain, this medicinal balm penetrates deep below the skin to relax and warm muscles while reducing inflammation. The Ultimate Pain Balm is specially formulated to address sore muscles, joint pain, minor aches, and muscle pain, making it a versatile and reliable solution for managing pain associated with tension headaches, menstruation, rheumatoid arthritis, and gout. It combines the natural healing properties of essential oils and active ingredients such as menthol and camphor to provide fast and targeted relief for pain and discomfort.",
     availability: true,
+    quantity: 1,
   },
 ]
 

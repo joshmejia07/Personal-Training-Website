@@ -30,7 +30,7 @@ export default function Contact() {
 
     setTimeout(() => {
       setMessageSent(false)
-    }, 3000)
+    }, 5000)
 
     console.log(formData)
     setFormData({

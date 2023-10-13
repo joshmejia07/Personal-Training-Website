@@ -16,14 +16,21 @@ PROGRAMS
 SHOP
 
 - Format
-- Get new hero image
-- Search bar ?
-- Category bar
 
 CONTACT
 
 - Create contact page
 
+CART
+
+- Create cart page
+
 CHECKOUT
 
 - Create check out page
+
+NAV WINDOW
+
+- Remove Contact
+- Add Training
+- Add login / sign up

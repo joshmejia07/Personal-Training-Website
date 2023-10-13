@@ -1,12 +1,18 @@
 import productData from "../../data.js"
 import "../../shop.css"
-import { Link } from "react-router-dom"
+import { Link, NavLink, useSearchParams } from "react-router-dom"
 import { BsStarFill } from "react-icons/bs"
 
 export default function Shop() {
-  const products = productData.map(product => {
-    const { brand, img, id, price, productName } = product
+  const [searchParams, setSearchParams] = useSearchParams()
+  const typeFilter = searchParams.get("category")
 
+  const displayedProducts = typeFilter
+    ? productData.filter(item => item.category.toLowerCase() === typeFilter)
+    : productData
+
+  const products = displayedProducts.map(product => {
+    const { brand, img, id, price, productName } = product
     return (
       <div key={id} className="product-container">
         <Link to={`/shop/${id}`}>
@@ -26,15 +32,48 @@ export default function Shop() {
     )
   })
   return (
-    <>
+    <div className="margin-top">
       <div className="shop-hero">
-        <h1>Build Better</h1>
-        <h1>Recover Faster</h1>
+        <h1>Products</h1>
+        <hr className="center" />
       </div>
-      <h4>Take your training to the next level</h4>
+
+      <div className="category-filter-container">
+        <NavLink
+          className={`nav-filter-link ${!typeFilter ? "active-link" : ""}`}
+          to=""
+        >
+          All
+        </NavLink>
+        <NavLink
+          className={`nav-filter-link ${
+            typeFilter === "supplements" ? "active-link" : ""
+          }`}
+          to="?category=supplements"
+        >
+          Supplements
+        </NavLink>
+        <NavLink
+          className={`nav-filter-link ${
+            typeFilter === "equipment" ? "active-link" : ""
+          }`}
+          to="?category=equipment"
+        >
+          Equipment
+        </NavLink>
+        <NavLink
+          className={`nav-filter-link ${
+            typeFilter === "recovery" ? "active-link" : ""
+          }`}
+          to="?category=recovery"
+        >
+          Recovery
+        </NavLink>
+      </div>
+
       <div className="page-container">
         <div className="shop-grid">{products}</div>
       </div>
-    </>
+    </div>
   )
 }
