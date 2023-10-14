@@ -12,13 +12,13 @@ export default function Shop() {
     : productData
 
   const products = displayedProducts.map(product => {
-    const { brand, img, id, price, productName } = product
+    const { brand, img, id, price, name } = product
     return (
       <div key={id} className="product-container">
         <Link to={`/shop/${id}`}>
-          <img src={img} alt={productName} className="shop-img" />
+          <img src={img} alt={name} className="shop-img" />
           <div className="product-info">
-            <h4>{productName}</h4>
+            <h4>{name}</h4>
             <p>{brand}</p>
             <h4>${price}</h4>
             <BsStarFill className="star" />

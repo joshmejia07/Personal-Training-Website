@@ -54,6 +54,12 @@ hr.center {
   border: none;
 }
 
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .section-statement,
 .opening-paragraph {
   color: var(--accent);
@@ -419,6 +425,7 @@ footer {
   color: #fff;
   padding: 1rem;
   text-align: center;
+  margin-top: auto;
 }
 
 footer p {

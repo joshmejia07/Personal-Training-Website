@@ -16,7 +16,7 @@ import cbd from "./assets/images/cbd.jpg"
 const productData = [
   {
     id: 1,
-    productName: "Naked Whey",
+    name: "Naked Whey",
     brand: "Naked Nutrition",
     category: "Supplements",
     price: 94.99,
@@ -28,7 +28,7 @@ const productData = [
   },
   {
     id: 2,
-    productName: "Naked Pea",
+    name: "Naked Pea",
     brand: "Naked Nutrition",
     category: "Supplements",
     price: 57.99,
@@ -40,7 +40,7 @@ const productData = [
   },
   {
     id: 3,
-    productName: "Creatine",
+    name: "Creatine",
     brand: "1st Phrom",
     category: "Supplements",
     price: 23.99,
@@ -52,7 +52,7 @@ const productData = [
   },
   {
     id: 4,
-    productName: "Caffeine Pills",
+    name: "Caffeine Pills",
     brand: "Kaged",
     category: "Supplements",
     price: 14.99,
@@ -64,7 +64,7 @@ const productData = [
   },
   {
     id: 5,
-    productName: "Multivitamin",
+    name: "Multivitamin",
     brand: "Kaged",
     category: "Supplements",
     price: 34.99,
@@ -76,7 +76,7 @@ const productData = [
   },
   {
     id: 6,
-    productName: "Primal Greens",
+    name: "Primal Greens",
     brand: "Primal Harvest",
     category: "Supplements",
     price: 49.99,
@@ -88,7 +88,7 @@ const productData = [
   },
   {
     id: 7,
-    productName: "Jump Rope",
+    name: "Jump Rope",
     brand: "Sweet Sweat",
     category: "Equipment",
     price: 19.99,
@@ -100,7 +100,7 @@ const productData = [
   },
   {
     id: 8,
-    productName: "Stability Ball 65cm",
+    name: "Stability Ball 65cm",
     brand: "TRX",
     category: "Equipment",
     price: 34.99,
@@ -112,7 +112,7 @@ const productData = [
   },
   {
     id: 9,
-    productName: "Bosu Ball",
+    name: "Bosu Ball",
     brand: "Rogue Fitness",
     category: "Equipment",
     price: 149.99,
@@ -124,7 +124,7 @@ const productData = [
   },
   {
     id: 10,
-    productName: "Suspension Trainer",
+    name: "Suspension Trainer",
     brand: "TRX",
     category: "Equipment",
     price: 198.99,
@@ -136,7 +136,7 @@ const productData = [
   },
   {
     id: 11,
-    productName: "Resistance Bands",
+    name: "Resistance Bands",
     brand: "Bala",
     category: "Equipment",
     price: 34.99,
@@ -148,7 +148,7 @@ const productData = [
   },
   {
     id: 12,
-    productName: "Lacrosse Ball",
+    name: "Lacrosse Ball",
     brand: "JXM",
     category: "Recovery",
     price: 9.99,
@@ -160,7 +160,7 @@ const productData = [
   },
   {
     id: 13,
-    productName: "Foam Roller",
+    name: "Foam Roller",
     brand: "Trigger Point",
     category: "Recovery",
     price: 44.99,
@@ -172,7 +172,7 @@ const productData = [
   },
   {
     id: 14,
-    productName: "CBD Cream",
+    name: "CBD Cream",
     brand: "Cymbiotika",
     category: "Recovery",
     price: 55.99,
