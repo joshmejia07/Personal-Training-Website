@@ -1,21 +1,30 @@
 import { Link } from "react-router-dom"
+import { useState } from "react"
 
-export default function Cart({ cartItems }) {
-  const totalPrice = () => {
-    const totalPrice = cartItems.reduce((total, item) => {
+export default function Cart({ cartItems, increaseQty, decreaseQty }) {
+  const [totalPrice, setTotalPrice] = useState(0)
+
+  const calcCartItems = () => {
+    return cartItems.reduce((total, item) => {
+      return total + item.quantity
+    }, 0)
+  }
+
+  const calculateTotalPrice = () => {
+    return cartItems.reduce((total, item) => {
       return total + item.price * item.quantity
     }, 0)
-    if (cartItems.length > 0) {
-      return totalPrice.toFixed(2)
-    } else return 0
+  }
+
+  const updateTotalPrice = () => {
+    setTotalPrice(calculateTotalPrice())
   }
 
   const items = cartItems.map(item => {
-    const { name, price, quantity, img, category, id } = item
+    const { name, price, img, category, id } = item
 
     return (
       <div key={id}>
-        <hr className="hr-cart" />
         <div className="cart-item">
           <div>
             <img src={img} className="cart-item-img" />
@@ -26,9 +35,25 @@ export default function Cart({ cartItems }) {
             <h3>${price}</h3>
           </div>
           <div className="cart-btn-container">
-            <button className="cart-btn">-</button>
-            <h4>{quantity}</h4>
-            <button className="cart-btn">+</button>
+            <button
+              className="cart-quantity-btn"
+              onClick={() => {
+                decreaseQty(item, item.id)
+                updateTotalPrice()
+              }}
+            >
+              -
+            </button>
+            <h4>{item.quantity}</h4>
+            <button
+              className="cart-quantity-btn"
+              onClick={() => {
+                increaseQty(item.id)
+                updateTotalPrice()
+              }}
+            >
+              +
+            </button>
           </div>
         </div>
         <hr className="hr-cart" />
@@ -36,14 +61,19 @@ export default function Cart({ cartItems }) {
     )
   })
 
+  const checkout = (
+    <>
+      <div className="cart-subtotal-container">
+        <p className="subtotal-text">Subtotal</p>
+        <p className="total-price-text">${totalPrice.toFixed(2)}</p>
+      </div>
+      <button className="checkout-btn">Checkout</button>
+    </>
+  )
+
   const emptyCart = (
     <>
-      <hr className="hr-cart" />
       <p className="empty-cart-message">Your cart is empty...</p>
-      <div className="cart-shopping-links">
-        <Link to="/programs">Shop Programs</Link>
-        <Link to="/shop">Shop Products</Link>
-      </div>
       <hr className="hr-cart" />
     </>
   )
@@ -51,13 +81,18 @@ export default function Cart({ cartItems }) {
   return (
     <div className="margin-top page-container">
       <h1>Shopping Cart</h1>
-      <p className="cart-item-count">
-        {cartItems.length > 0 ? cartItems.length : 0}
-        {cartItems.length === 1 ? " Item" : " Items"}
-      </p>
+      <p className="cart-item-count">Your Cart {`(${calcCartItems()})`}</p>
+      <hr className="hr-cart" />
       {cartItems.length > 0 ? items : emptyCart}
-      <p>Subtotal</p>
-      <p>${totalPrice()}</p>
+      {cartItems.length > 0 && checkout}
+      <div className="cart-shopping-links">
+        <Link to="/programs">
+          <button className="cart-shop-btn">Shop Programs</button>
+        </Link>
+        <Link to="/shop">
+          <button className="cart-shop-btn">Shop Products</button>
+        </Link>
+      </div>
     </div>
   )
 }

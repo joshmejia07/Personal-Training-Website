@@ -15,11 +15,55 @@ import { Route, Routes } from "react-router-dom"
 
 function App() {
   const [cartItems, setCartItems] = useState([])
-  const addItemToCart = item => {
-    setCartItems([...cartItems, item])
+  const [updatedItem, setUpdatedItem] = useState({})
+
+  const addItemToCart = (item, id) => {
+    const itemIndex = cartItems.findIndex(i => i.id === id)
+    if (itemIndex !== -1) {
+      cartItems[itemIndex] = {
+        ...cartItems[itemIndex],
+        quantity: cartItems[itemIndex].quantity + updatedItem.quantity || 1,
+      }
+    } else setCartItems([...cartItems, item])
   }
 
-  console.log(cartItems)
+  // modify quantity for objects that have not been pushed to cartItems
+
+  function incrementCount(item) {
+    const updatedItem = { ...item, quantity: item.quantity + 1 }
+    setUpdatedItem(updatedItem)
+  }
+
+  function decrementCount(item) {
+    const updatedItem =
+      item.quantity >= 2
+        ? {
+            ...item,
+            quantity: item.quantity - 1,
+          }
+        : item
+    setUpdatedItem(updatedItem)
+  }
+
+  // modify quantity for objects in cart
+
+  function increaseQty(id) {
+    const itemIndex = cartItems.findIndex(i => i.id === id)
+    cartItems[itemIndex] = {
+      ...cartItems[itemIndex],
+      quantity: cartItems[itemIndex].quantity + 1,
+    }
+  }
+
+  function decreaseQty(item, id) {
+    const itemIndex = cartItems.findIndex(i => i.id === id)
+    if (item.quantity > 1) {
+      cartItems[itemIndex] = {
+        ...cartItems[itemIndex],
+        quantity: cartItems[itemIndex].quantity - 1,
+      }
+    }
+  }
 
   return (
     <Routes>
@@ -29,12 +73,39 @@ function App() {
         <Route path="shop" element={<Shop />} />
         <Route
           path="shop/:id"
-          element={<Product addItemToCart={addItemToCart} />}
+          element={
+            <Product
+              updatedItem={updatedItem}
+              addItemToCart={addItemToCart}
+              incrementCount={incrementCount}
+              decrementCount={decrementCount}
+              setUpdatedItem={setUpdatedItem}
+            />
+          }
         />
-        <Route path="cart" element={<Cart cartItems={cartItems} />} />
+        <Route
+          path="cart"
+          element={
+            <Cart
+              cartItems={cartItems}
+              increaseQty={increaseQty}
+              decreaseQty={decreaseQty}
+            />
+          }
+        />
       </Route>
     </Routes>
   )
 }
 
 export default App
+
+// const addItemToCart = (item, id) => {
+//   if (cartItems.length > 0) {
+//     cartItems.forEach(i => {
+//       if (i.id === id) {
+//         i = { ...i, quantity: i.quantity + 1 }
+//       }
+//     })
+//   } else setCartItems([...cartItems, item])
+// }
