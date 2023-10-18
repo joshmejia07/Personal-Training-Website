@@ -146,6 +146,22 @@ a {
   font-weight: 600;
 }
 
+.item-added-message {
+  background-color: #fff;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  width: 100%;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.item-added-message h4 {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
 /* Cart */
 
 .cart-item-count {

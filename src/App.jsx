@@ -65,9 +65,15 @@ function App() {
     }
   }
 
+  const calcCartItems = () => {
+    return cartItems.reduce((total, item) => {
+      return total + item.quantity
+    }, 0)
+  }
+
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/" element={<Layout calcCartItems={calcCartItems} />}>
         <Route index element={<Home />} />
         <Route path="programs" element={<Programs />} />
         <Route path="shop" element={<Shop />} />
@@ -90,6 +96,7 @@ function App() {
               cartItems={cartItems}
               increaseQty={increaseQty}
               decreaseQty={decreaseQty}
+              calcCartItems={calcCartItems}
             />
           }
         />
@@ -99,13 +106,3 @@ function App() {
 }
 
 export default App
-
-// const addItemToCart = (item, id) => {
-//   if (cartItems.length > 0) {
-//     cartItems.forEach(i => {
-//       if (i.id === id) {
-//         i = { ...i, quantity: i.quantity + 1 }
-//       }
-//     })
-//   } else setCartItems([...cartItems, item])
-// }

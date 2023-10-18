@@ -16,6 +16,7 @@ PROGRAMS
 SHOP
 
 - Format
+- Added confirmation on button click
 
 CONTACT
 

@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
-export default function Cart({ cartItems, increaseQty, decreaseQty }) {
+export default function Cart({
+  cartItems,
+  increaseQty,
+  decreaseQty,
+  calcCartItems,
+}) {
   const [totalPrice, setTotalPrice] = useState(0)
-
-  const calcCartItems = () => {
-    return cartItems.reduce((total, item) => {
-      return total + item.quantity
-    }, 0)
-  }
 
   const calculateTotalPrice = () => {
     return cartItems.reduce((total, item) => {
@@ -19,6 +18,10 @@ export default function Cart({ cartItems, increaseQty, decreaseQty }) {
   const updateTotalPrice = () => {
     setTotalPrice(calculateTotalPrice())
   }
+
+  useEffect(() => {
+    setTotalPrice(calculateTotalPrice())
+  }, [])
 
   const items = cartItems.map(item => {
     const { name, price, img, category, id } = item

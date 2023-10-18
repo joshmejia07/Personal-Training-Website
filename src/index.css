@@ -31,6 +31,11 @@ button {
   margin: 0;
 }
 
+a,
+button {
+  cursor: pointer;
+}
+
 textarea {
   font-family: inherit;
   height: 200px;
@@ -149,6 +154,33 @@ header .shop-btn {
   position: absolute;
   top: 12px;
   right: 12px;
+  color: #fff;
+}
+
+.shop-btn-relative {
+  position: relative;
+  display: inline-block;
+  width: min-content;
+}
+
+.shopping-cart-item-count {
+  padding: 0.5rem;
+  background-color: #eaa91d;
+  border-radius: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -5px;
+  left: 12px;
+}
+
+.shopping-cart-item-count span {
   color: #fff;
 }
 

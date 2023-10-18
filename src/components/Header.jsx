@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { IoMenuOutline } from "react-icons/io5"
 import { AiOutlineShopping, AiOutlineClose } from "react-icons/ai"
 
-export default function Header() {
+export default function Header({ calcCartItems }) {
   const [toggle, setToggle] = useState(false)
 
   const showMenu = () => setToggle(prev => !prev)
@@ -43,7 +43,12 @@ export default function Header() {
           JXM
         </Link>
         <Link to="cart">
-          <AiOutlineShopping className="shop-btn" />
+          <div className="shop-btn-relative">
+            <AiOutlineShopping className="shop-btn" />
+            <div className="shopping-cart-item-count">
+              <span>{calcCartItems()}</span>
+            </div>
+          </div>
         </Link>
         <Link to="#">
           <IoMenuOutline className="menu-btn" onClick={showMenu} />

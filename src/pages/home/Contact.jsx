@@ -32,7 +32,6 @@ export default function Contact() {
       setMessageSent(false)
     }, 5000)
 
-    console.log(formData)
     setFormData({
       name: "",
       email: "",
