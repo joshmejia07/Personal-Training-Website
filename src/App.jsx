@@ -5,6 +5,7 @@ import "./App.css"
 // Components
 import Home from "./pages/home/Home"
 import Programs from "./pages/programs/Programs"
+import ProgramDetails from "./pages/programs/ProgramDetails"
 import Shop from "./pages/shop/Shop"
 import Layout from "./components/Layout"
 import Product from "./pages/shop/Product"
@@ -76,6 +77,7 @@ function App() {
       <Route path="/" element={<Layout calcCartItems={calcCartItems} />}>
         <Route index element={<Home />} />
         <Route path="programs" element={<Programs />} />
+        <Route path="programs/:id" element={<ProgramDetails />} />
         <Route path="shop" element={<Shop />} />
         <Route
           path="shop/:id"

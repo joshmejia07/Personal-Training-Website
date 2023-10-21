@@ -15,16 +15,9 @@ PROGRAMS
 
 SHOP
 
-- Format
-- Added confirmation on button click
-
-CONTACT
-
-- Create contact page
-
 CART
 
-- Create cart page
+- Add delete button
 
 CHECKOUT
 

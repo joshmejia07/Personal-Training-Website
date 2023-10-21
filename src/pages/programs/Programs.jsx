@@ -1,5 +1,5 @@
 import "../../programs.css"
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 import data from "../../programData"
 
 export default function Programs() {
@@ -22,7 +22,9 @@ export default function Programs() {
           <h3>Features</h3>
           <hr className="left" />
           <p>{description}</p>
-          <button className="program-btn">Learn more</button>
+          <Link to={`/programs/${id}`}>
+            <button className="program-btn">Learn more</button>
+          </Link>
         </div>
       </div>
     )

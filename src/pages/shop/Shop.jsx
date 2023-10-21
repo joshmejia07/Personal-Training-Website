@@ -1,4 +1,4 @@
-import productData from "../../data.js"
+import data from "../../data.js"
 import "../../shop.css"
 import { Link, NavLink, useSearchParams } from "react-router-dom"
 import { BsStarFill } from "react-icons/bs"
@@ -8,8 +8,8 @@ export default function Shop() {
   const typeFilter = searchParams.get("category")
 
   const displayedProducts = typeFilter
-    ? productData.filter(item => item.category.toLowerCase() === typeFilter)
-    : productData
+    ? data.filter(item => item.category.toLowerCase() === typeFilter)
+    : data
 
   const products = displayedProducts.map(product => {
     const { brand, img, id, price, name } = product
