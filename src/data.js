@@ -106,7 +106,7 @@ const productData = [
     price: 34.99,
     img: stabilityBall,
     description:
-      "Balance out your training. Improve core strength, overall balance, and—yes—even your posture by adding our TRX® Stabiilty Ball to any workout.",
+      "Balance out your training. Improve core strength, overall balance, and—yes—even your posture by adding our TRX® Stability Ball to any workout.",
     availability: true,
     quantity: 1,
   },

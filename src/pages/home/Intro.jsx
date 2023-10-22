@@ -14,7 +14,6 @@ export default function Intro() {
         Whether you are a complete beginner or seasoned gym enthusiast looking
         to sculpt, in person training will ensure that you are always moving in
         the right direction while providing you with support and accountability.
-        Learn More
       </p>
       <img className="section-img" src={squatRack} alt="squat rack" />
     </section>

@@ -1,5 +1,7 @@
 TODO:
 
+- make sure all img have alt tags
+
 HOME
 
 - Hook up all buttons
@@ -11,9 +13,7 @@ PROGRAMS
 
 - Format
 - Hook up buttons
-- Create sub page for all programs
-
-SHOP
+- Create Personal Training component and object
 
 CART
 

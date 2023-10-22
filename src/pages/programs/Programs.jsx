@@ -30,8 +30,10 @@ export default function Programs() {
     )
   })
   return (
-    <div className="container">
-      <h4 className="section-statement">Change starts here</h4>
+    <div className="margin-top container">
+      <h4 className="section-statement program-page-margin">
+        Change starts here
+      </h4>
       <h1>Programs</h1>
       <hr className="left" />
       <p>

@@ -1,7 +1,11 @@
 .container {
   text-align: start;
   width: 23rem;
-  margin: 4.5rem auto auto auto;
+  margin: 1rem auto auto auto;
+}
+
+.program-page-margin {
+  margin-top: 1rem;
 }
 
 .card {
@@ -137,4 +141,74 @@
   color: #fff;
   border-radius: 50%;
   padding: 0.4rem;
+}
+
+.description-box {
+  background-color: #eaeaea;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  border-radius: 12px;
+}
+
+/* Personal training */
+
+.personal-training-section h1 {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.in-person-heading {
+  text-align: center;
+}
+
+.in-person-heading span {
+  font-size: 1em;
+}
+
+.training-price-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.price-btn {
+  background-color: #fff;
+  color: var(--accent);
+  font-weight: 600;
+  border: 2px solid var(--accent);
+  border-radius: 25px;
+  width: 7rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn-active {
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  border: 2px solid var(--accent);
+  border-radius: 25px;
+  width: 7rem;
+  height: 2.2rem;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+}
+
+/* Price container */
+.personal-training-section .pricing {
+  margin-bottom: 0;
+}
+
+.pricing h2 {
+  margin-bottom: 0.3rem;
+}
+
+/* /month */
+.personal-training-section .text-colored {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.personal-training-section button {
+  margin-bottom: 1rem;
 }
