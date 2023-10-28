@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
-import data from "../../programData"
+import data from "../../data"
 
 export default function Pricing() {
-  const programs = data.slice(0, 3)
+  const programs = data.programs.slice(0, 3)
 
   const programCards = programs.map(card => {
     const { id, img, name, experience, description, inPerson } = card
@@ -23,7 +23,9 @@ export default function Pricing() {
           <h3>Features</h3>
           <hr className="left" />
           <p>{description}</p>
-          <button className="program-btn">Learn more</button>
+          <Link to={`/programs/${id}`}>
+            <button className="program-btn">Learn more</button>
+          </Link>
         </div>
       </div>
     )

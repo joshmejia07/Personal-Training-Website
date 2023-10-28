@@ -13,7 +13,7 @@ export default function Product({
 }) {
   const [isAdded, setIsAdded] = useState(false)
   const params = useParams()
-  const item = data.find(item => item.id === parseInt(params.id))
+  const item = data.products.find(item => item.id === parseInt(params.id))
 
   useEffect(() => {
     setUpdatedItem(item)

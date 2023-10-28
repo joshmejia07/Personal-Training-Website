@@ -1,19 +1,12 @@
 TODO:
 
 - make sure all img have alt tags
+- media queries
 
 HOME
 
-- Hook up all buttons
-- Link socials
-- Hook up contact form and email
-- Hook up cart / shopping bag
-
-PROGRAMS
-
-- Format
-- Hook up buttons
-- Create Personal Training component and object
+- replace content for success stories
+- social links ?
 
 CART
 
@@ -23,8 +16,11 @@ CHECKOUT
 
 - Create check out page
 
+LOG IN
+
+- create log in functionality
+
 NAV WINDOW
 
 - Remove Contact
-- Add Training
 - Add login / sign up

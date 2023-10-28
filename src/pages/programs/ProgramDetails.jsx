@@ -1,20 +1,19 @@
-import data from "../../programData"
+import data from "../../data"
+import PersonalTraining from "./PersonalTraining"
 import ProgramIcons from "./ProgramIcons"
-import { useParams, NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { BsStarFill } from "react-icons/bs"
-import squat from "../../assets/images/in-person-training.jpg"
-import { useState } from "react"
+import { nanoid } from "nanoid"
 
-export default function ProgramDetails() {
+export default function ProgramDetails({
+  addItemToCart,
+  updatedItem,
+  setUpdatedItem,
+}) {
   const params = useParams()
-  const item = data.find(item => item.id === parseInt(params.id))
+  const item = data.programs.find(item => item.id === parseInt(params.id))
   const { name, img, perks, price, description } = item
-
-  const [activeButton, setActiveButton] = useState("button1")
-
-  const handleButtonClick = buttonName => {
-    setActiveButton(buttonName)
-  }
 
   return (
     <div className="margin-top">
@@ -34,14 +33,21 @@ export default function ProgramDetails() {
           <span className="review-count">1547 reviews</span>
         </div>
         {perks.map(perk => (
-          <p>+ {perk}</p>
+          <p key={nanoid()}>+ {perk}</p>
         ))}
         <div className="pricing">
           <h2>${price}</h2>
           <h2 className="strikethrough-price">$120</h2>
         </div>
 
-        <button className="program-btn">Get started</button>
+        <Link to="/cart">
+          <button
+            className="program-btn"
+            onClick={() => addItemToCart(item, item.id)}
+          >
+            Get started
+          </button>
+        </Link>
         <ProgramIcons name={name} />
 
         <div className="description-box">
@@ -54,8 +60,18 @@ export default function ProgramDetails() {
             <span className="text-colored">in person</span> training
           </h2>
         </div>
+        <PersonalTraining
+          addItemToCart={addItemToCart}
+          updatedItem={updatedItem}
+          setUpdatedItem={setUpdatedItem}
+        />
+      </div>
+    </div>
+  )
+}
 
-        <div className="personal-training-section">
+{
+  /* <div className="personal-training-section">
           <img src={squat} className="section-img" />
           <h1>Personal training</h1>
           <h4>Frequency / month</h4>
@@ -98,8 +114,5 @@ export default function ProgramDetails() {
           </div>
           <p className="text-colored">/month</p>
           <button className="program-btn">Get started</button>
-        </div>
-      </div>
-    </div>
-  )
+        </div> */
 }

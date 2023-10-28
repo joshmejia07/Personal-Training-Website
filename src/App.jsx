@@ -77,7 +77,16 @@ function App() {
       <Route path="/" element={<Layout calcCartItems={calcCartItems} />}>
         <Route index element={<Home />} />
         <Route path="programs" element={<Programs />} />
-        <Route path="programs/:id" element={<ProgramDetails />} />
+        <Route
+          path="programs/:id"
+          element={
+            <ProgramDetails
+              addItemToCart={addItemToCart}
+              updatedItem={updatedItem}
+              setUpdatedItem={setUpdatedItem}
+            />
+          }
+        />
         <Route path="shop" element={<Shop />} />
         <Route
           path="shop/:id"

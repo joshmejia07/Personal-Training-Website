@@ -183,10 +183,13 @@ a {
 .cart-item {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
 }
 
 .cart-item-img {
   width: 8rem;
+  height: 8rem;
+  object-fit: cover;
 }
 
 .cart-item-info {

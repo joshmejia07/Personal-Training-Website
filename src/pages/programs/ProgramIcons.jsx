@@ -5,6 +5,8 @@ import { TbStretching } from "react-icons/tb"
 export default function ProgramIcons({ name }) {
   switch (name) {
     case "Total Wellness":
+    case "Total Muscle":
+    case "Total Weight Loss":
       return (
         <div className="feature-container">
           <div className="feature">

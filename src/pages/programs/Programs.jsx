@@ -1,9 +1,9 @@
 import "../../programs.css"
 import { Link } from "react-router-dom"
-import data from "../../programData"
+import data from "../../data"
 
 export default function Programs() {
-  const card = data.map(program => {
+  const card = data.programs.map(program => {
     const { id, img, name, inPerson, experience, description } = program
     return (
       <div key={id} className="card">
