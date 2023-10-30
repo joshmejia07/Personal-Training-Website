@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
+import Checkout from "./Payment"
 
 export default function Cart({
   cartItems,
+  setCartItems,
   increaseQty,
   decreaseQty,
   calcCartItems,
 }) {
   const [totalPrice, setTotalPrice] = useState(0)
+  const [isClicked, setIsClicked] = useState(false)
 
   const calculateTotalPrice = () => {
     return cartItems.reduce((total, item) => {
@@ -23,7 +26,17 @@ export default function Cart({
     setTotalPrice(calculateTotalPrice())
   }, [])
 
-  const items = cartItems.map(item => {
+  const handleDelete = index => {
+    const newData = [...cartItems]
+    newData.splice(index, 1)
+    setCartItems(newData)
+  }
+
+  const handleClick = () => {
+    setIsClicked(true)
+  }
+
+  const items = cartItems.map((item, index) => {
     const { name, price, img, category, id } = item
 
     return (
@@ -38,25 +51,32 @@ export default function Cart({
             <h3>${price}</h3>
           </div>
           <div className="cart-btn-container">
-            <button
-              className="cart-quantity-btn"
-              onClick={() => {
-                decreaseQty(item, item.id)
-                updateTotalPrice()
-              }}
-            >
-              -
-            </button>
-            <h4>{item.quantity}</h4>
-            <button
-              className="cart-quantity-btn"
-              onClick={() => {
-                increaseQty(item.id)
-                updateTotalPrice()
-              }}
-            >
-              +
-            </button>
+            <div>
+              <span className="remove-btn" onClick={() => handleDelete(index)}>
+                Remove
+              </span>
+            </div>
+            <div className="qty-btn-container">
+              <button
+                className="cart-quantity-btn"
+                onClick={() => {
+                  decreaseQty(item, item.id)
+                  updateTotalPrice()
+                }}
+              >
+                -
+              </button>
+              <h4>{item.quantity}</h4>
+              <button
+                className="cart-quantity-btn"
+                onClick={() => {
+                  increaseQty(item.id)
+                  updateTotalPrice()
+                }}
+              >
+                +
+              </button>
+            </div>
           </div>
         </div>
         <hr className="hr-cart" />
@@ -70,7 +90,13 @@ export default function Cart({
         <p className="subtotal-text">Subtotal</p>
         <p className="total-price-text">${totalPrice.toFixed(2)}</p>
       </div>
-      <button className="checkout-btn">Checkout</button>
+      {isClicked ? (
+        <Checkout />
+      ) : (
+        <button className="checkout-btn" onClick={() => handleClick()}>
+          Checkout
+        </button>
+      )}
     </>
   )
 

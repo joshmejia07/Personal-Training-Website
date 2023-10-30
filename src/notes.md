@@ -8,10 +8,6 @@ HOME
 - replace content for success stories
 - social links ?
 
-CART
-
-- Add delete button
-
 CHECKOUT
 
 - Create check out page

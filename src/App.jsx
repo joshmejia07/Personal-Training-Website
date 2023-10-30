@@ -1,6 +1,4 @@
 import { useState } from "react"
-// CSS
-import "./App.css"
 
 // Components
 import Home from "./pages/home/Home"
@@ -87,6 +85,7 @@ function App() {
             />
           }
         />
+
         <Route path="shop" element={<Shop />} />
         <Route
           path="shop/:id"
@@ -105,6 +104,7 @@ function App() {
           element={
             <Cart
               cartItems={cartItems}
+              setCartItems={setCartItems}
               increaseQty={increaseQty}
               decreaseQty={decreaseQty}
               calcCartItems={calcCartItems}

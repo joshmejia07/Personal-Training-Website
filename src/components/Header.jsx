@@ -22,9 +22,6 @@ export default function Header({ calcCartItems }) {
           <Link to="/shop" className="nav-links" onClick={showMenu}>
             Shop
           </Link>
-          <Link to="#contact" className="nav-links" onClick={showMenu}>
-            Contact
-          </Link>
         </div>
       </div>
     )

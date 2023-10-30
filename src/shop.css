@@ -200,11 +200,24 @@ a {
 
 .cart-btn-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: end;
+  gap: 2.3rem;
   margin-bottom: 1rem;
   margin-top: auto;
-  text-align: center;
+}
+
+.qty-btn-container {
+  display: flex;
+  align-items: center;
   gap: 1rem;
+}
+
+.remove-btn {
+  color: #101013;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.8rem;
 }
 
 .cart-quantity-btn {
@@ -258,4 +271,44 @@ a {
   color: #101013;
   border: 2px solid #101013;
   padding: 1.2rem;
+}
+
+/* Payment Form */
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.label-style {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.label-style input {
+  border: none;
+  border-bottom: 1px solid #101013;
+  border-radius: 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.label-container-small {
+  display: flex;
+  flex-direction: row;
+}
+
+.label-container-small input {
+  width: 8rem;
+}
+
+.margin-right {
+  margin-right: auto;
 }
