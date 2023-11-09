@@ -108,7 +108,7 @@ export default function Cart({
   )
 
   return (
-    <div className="margin-top page-container">
+    <div className="page-container">
       <h1>Shopping Cart</h1>
       <p className="cart-item-count">Your Cart {`(${calcCartItems()})`}</p>
       <hr className="hr-cart" />

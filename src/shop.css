@@ -16,18 +16,11 @@ a {
 }
 
 .page-container {
-  margin: auto;
+  margin-inline: auto;
   width: 1200px;
   max-width: 95%;
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.search-bar {
-  padding: 10px 10px;
-  width: 100%;
-  font-size: 1rem;
-  margin-bottom: 1rem;
 }
 
 .shop-hero {

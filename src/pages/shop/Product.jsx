@@ -27,7 +27,7 @@ export default function Product({
   }
 
   return (
-    <div className="page-container margin-top">
+    <div className="page-container">
       <Link to="/shop" className="shop-link">
         Back to shop
       </Link>

@@ -4,6 +4,8 @@
 
 :root {
   --accent: #eaa91d;
+  --clr-neutral-800: #252525;
+  --clr-neutral-900: #1e1e1e;
 }
 
 .text-colored {
@@ -11,8 +13,9 @@
 }
 
 body {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   margin: 0;
+  margin-top: 3.5rem;
 }
 
 p {
@@ -68,10 +71,6 @@ hr.center {
 .section-statement,
 .opening-paragraph {
   color: var(--accent);
-}
-
-.margin-top {
-  margin-top: 3.5rem;
 }
 
 /* HEADER */
@@ -165,7 +164,7 @@ header .shop-btn {
 
 .shopping-cart-item-count {
   padding: 0.5rem;
-  background-color: #eaa91d;
+  background-color: var(--accent);
   border-radius: 50%;
   width: 0.5rem;
   height: 0.5rem;
@@ -195,7 +194,6 @@ header .shop-btn {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -250px;
-  margin-top: 2.5rem;
 }
 
 .hero-text-container h4,
@@ -232,11 +230,17 @@ button {
   margin: 1.5rem auto 1rem auto;
 }
 
+/* @media (min-width: 768px) {
+  .split-container {
+    display: flex;
+  }
+} */
+
 .section-img {
   object-fit: cover;
   max-width: 100%;
-  width: 1200px;
-  height: 380px;
+  width: 75rem;
+  height: 23.75em;
 }
 
 /* PROGRAM SECTION */
@@ -262,7 +266,7 @@ button {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  color: #eaa91d;
+  color: var(--accent);
   background-color: #2e2e2e;
   gap: 2px;
 }
@@ -303,7 +307,7 @@ button {
   max-width: 21rem;
   height: 28rem;
   text-align: center;
-  border: 2px solid #eaa91d;
+  border: 2px solid var(--accent);
   width: 65vw;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -419,7 +423,7 @@ textarea {
 
 .form-submit-message {
   background-color: #101013;
-  border: 2px solid #eaa91d;
+  border: 2px solid var(--accent);
   width: 100%;
   text-align: center;
   padding: 1rem;
@@ -436,7 +440,7 @@ textarea {
 
 .info-container h5,
 .banner-accent {
-  color: #eaa91d;
+  color: var(--accent);
 }
 
 .info-icons,

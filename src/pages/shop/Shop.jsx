@@ -33,7 +33,7 @@ export default function Shop() {
     )
   })
   return (
-    <div className="margin-top">
+    <div>
       <div className="shop-hero">
         <h1>Products</h1>
         <hr className="center" />

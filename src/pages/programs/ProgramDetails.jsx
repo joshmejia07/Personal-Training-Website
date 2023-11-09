@@ -16,7 +16,7 @@ export default function ProgramDetails({
   const { name, img, perks, price, description } = item
 
   return (
-    <div className="margin-top">
+    <div>
       <img src={img} className="program-img" alt={name} />
 
       <div className="container">
