@@ -34,6 +34,31 @@ button {
   margin: 0;
 }
 
+section {
+  padding: 1.5rem 0;
+  @media (min-width: 40em) {
+    header,
+    section {
+      padding: 4rem 0;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 75rem);
+}
+
+.split,
+.split-fullscreen {
+  display: flex;
+  flex-direction: column;
+}
+
 a,
 button {
   cursor: pointer;
@@ -230,23 +255,25 @@ button {
   margin: 1.5rem auto 1rem auto;
 }
 
-/* @media (min-width: 768px) {
-  .split-container {
-    display: flex;
-  }
-} */
+.child {
+  flex: 1;
+  margin-top: 1rem;
+}
 
-.section-img {
+/* .section-img {
   object-fit: cover;
   max-width: 100%;
   width: 75rem;
   height: 23.75em;
-}
+} */
 
 /* PROGRAM SECTION */
 
+.split-fullscreen {
+  height: 840px;
+}
+
 .program-container {
-  height: 400px;
   background-image: linear-gradient(
       to left,
       rgba(0, 0, 0, 0.9),
@@ -257,6 +284,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
 }
 
 .programs-title {
@@ -269,6 +297,7 @@ button {
   color: var(--accent);
   background-color: #2e2e2e;
   gap: 2px;
+  flex: 1;
 }
 
 .grid-item {
@@ -279,12 +308,12 @@ button {
   align-items: center;
   gap: 0.7rem;
   background-color: #252525;
-  height: 133px;
+  height: 100%;
 }
 
 .icons {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 /* PRICING SECTION */
@@ -468,4 +497,49 @@ footer p {
   margin: 0;
   font-size: 8px;
   color: #bbbbbb;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 48em) {
+  .child {
+    flex: 1;
+  }
+
+  .split,
+  .split-fullscreen {
+    flex-direction: row;
+  }
+
+  .split,
+  .split-fullscreen > * {
+    flex-basis: 100%;
+  }
+
+  .split > * + * {
+    margin-left: 2em;
+  }
+
+  .split-fullscreen {
+    min-height: 441px;
+    max-height: 550px;
+  }
+
+  .hero-img {
+    background-position: -75px;
+    background-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.7)
+      ),
+      url(assets/images/hero-img.jpg);
+  }
+
+  .hero-text-container {
+    margin-left: 2rem;
+  }
+
+  .card {
+    width: 15rem;
+  }
 }
