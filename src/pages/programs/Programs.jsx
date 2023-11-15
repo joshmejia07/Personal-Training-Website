@@ -13,15 +13,15 @@ export default function Programs() {
         </div>
         <div className="card-info">
           <div className="fitness-level">
-            <p>{experience}</p>
             <div className="location">
               {inPerson && <p>In person</p>}
               <p>Online</p>
             </div>
+            <p>{experience}</p>
           </div>
           <h3>Features</h3>
           <hr className="left" />
-          <p>{description}</p>
+          <p className="card__preview-text">{description}</p>
           <Link to={`/programs/${id}`}>
             <button className="program-btn">Learn more</button>
           </Link>
@@ -41,7 +41,7 @@ export default function Programs() {
         fitness levels and backgrounds. Transform your life with confidence by
         choosing the program that is right for you.
       </p>
-      <div className="program-card">{card}</div>
+      <div className="card-grid">{card}</div>
     </div>
   )
 }

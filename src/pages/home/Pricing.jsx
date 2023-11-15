@@ -14,13 +14,9 @@ export default function Pricing() {
         </div>
         <div className="card-info">
           <div className="fitness-level">
-            <h3 className="text-colored">Weight Loss</h3>
             <h2>{name}</h2>
-            <div className="location">
-              {inPerson && <p>In person</p>}
-              <p>Online</p>
-            </div>
-            <p className="experience">{experience}</p>
+            <p className="text-colored">{experience}</p>
+            <p className="card__preview-text">{description}</p>
             <div className="pricing">
               <h2>${price}</h2>
               <h2 className="strikethrough-price">$120</h2>
@@ -41,7 +37,7 @@ export default function Pricing() {
         <h1>Choose your plan</h1>
         <hr className="center" />
       </div>
-      <div className="split">{programCards}</div>
+      <div className="card-grid">{programCards}</div>
     </div>
   )
 }

@@ -260,13 +260,6 @@ button {
   margin-top: 1rem;
 }
 
-/* .section-img {
-  object-fit: cover;
-  max-width: 100%;
-  width: 75rem;
-  height: 23.75em;
-} */
-
 /* PROGRAM SECTION */
 
 .split-fullscreen {
@@ -321,37 +314,15 @@ button {
 .pricing-title,
 .products-title {
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
-}
-.price-card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
-  margin-bottom: 4rem;
-}
-
-.price-card {
-  max-width: 21rem;
-  height: 28rem;
-  text-align: center;
-  border: 2px solid var(--accent);
-  width: 65vw;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-span {
-  color: #bbbbbb;
-  font-size: 10px;
 }
 
 /* BANNER */
 
 .banner {
   color: #fff;
-  height: 14rem;
+  height: 25rem;
   background-image: linear-gradient(
       to left,
       rgba(0, 0, 0, 0.9),
@@ -423,7 +394,7 @@ span {
   align-items: center;
   margin: auto;
   padding: 2rem 0 2rem 0;
-  max-width: 95%;
+  width: min(95%, 600px);
 }
 
 .contact-form button {
@@ -501,6 +472,12 @@ footer p {
 
 /* MEDIA QUERIES */
 
+@media (min-width: 45em) {
+  .card {
+    width: 95%;
+  }
+}
+
 @media (min-width: 48em) {
   .child {
     flex: 1;
@@ -539,7 +516,11 @@ footer p {
     margin-left: 2rem;
   }
 
-  .card {
-    width: 15rem;
+  .banner {
+    height: 550px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(4, 2fr);
   }
 }

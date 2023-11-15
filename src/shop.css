@@ -31,7 +31,7 @@ a {
     ),
     url(./assets/images/product-hero.jpg);
   background-size: cover;
-  height: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,8 +48,9 @@ a {
 }
 
 .shop-grid {
+  --column-count: 2;
   display: grid;
-  grid-template-columns: repeat(2, 2fr);
+  grid-template-columns: repeat(var(--column-count), 2fr);
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -60,6 +61,8 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  max-width: 1000px;
+  margin-inline: auto;
 }
 
 .nav-filter-link {
@@ -304,4 +307,24 @@ a {
 
 .margin-right {
   margin-right: auto;
+}
+
+@media (min-width: 48em) {
+  .shop-grid {
+    --column-count: 3;
+  }
+
+  .shop-hero {
+    height: 500px;
+  }
+}
+
+@media (min-width: 70em) {
+  .shop-grid {
+    --column-count: 4;
+  }
+
+  .shop-hero {
+    height: 700px;
+  }
 }
