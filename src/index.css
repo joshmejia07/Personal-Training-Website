@@ -313,8 +313,8 @@ button {
 }
 
 .icons {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.7em;
+  height: 1.7em;
 }
 
 /* PRICING SECTION */
@@ -583,6 +583,16 @@ footer p {
 @media (min-width: 110em) {
   :root {
     --fs-lrg: 7rem;
+    --fs-400: 1.2rem;
+    --fs-600: 2.2rem;
+  }
+
+  h1 {
+    font-size: var(--fs-600);
+  }
+
+  h4 {
+    font-size: var(--fs-400);
   }
 
   .hero-text-bg {
@@ -601,5 +611,22 @@ footer p {
   .hero-text-container button {
     font-weight: 600;
     font-size: 1.2rem;
+  }
+
+  .hero-text-container h4 {
+    font-size: 1.5rem;
+  }
+
+  .icons {
+    width: 2em;
+    height: 2em;
+  }
+
+  .banner {
+    height: 650px;
+  }
+
+  .banner h1 {
+    font-size: 4rem;
   }
 }

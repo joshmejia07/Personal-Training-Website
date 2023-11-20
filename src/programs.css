@@ -92,6 +92,7 @@
 /* ProgramDetails Page */
 
 .program-img {
+  max-width: 1200px;
   width: 100%;
   height: 30rem;
   object-fit: cover;

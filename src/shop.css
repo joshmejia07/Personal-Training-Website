@@ -328,3 +328,10 @@ a {
     height: 700px;
   }
 }
+
+@media (min-width: 110em) {
+  .shop-hero {
+    background-position: center;
+    height: 800px;
+  }
+}

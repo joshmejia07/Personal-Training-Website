@@ -17,9 +17,8 @@ export default function ProgramDetails({
 
   return (
     <div>
-      <img src={img} className="program-img" alt={name} />
-
       <div className="container">
+        <img src={img} className="section-img" alt={name} />
         <div className="program-title">
           <h1 className="program-name">{name}</h1>
           <p className="text-colored">Online</p>
@@ -69,4 +68,3 @@ export default function ProgramDetails({
     </div>
   )
 }
-
