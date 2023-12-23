@@ -12,7 +12,8 @@ export default function Hero() {
           <div className="hero-text-bg">
             <div className="hero-text-container">
               <h4 className="text-colored">train with</h4>
-              <h1>Josh Mejia</h1>
+              {/* <h1>Josh Mejia</h1> */}
+              <h1>JXM</h1>
               <hr className="left" />
               <p>
                 Over twelve years experience in personal training, nutritional
@@ -29,7 +30,7 @@ export default function Hero() {
         <div className="hero-img">
           <div className="hero-text-container">
             <h4 className="text-colored">train with</h4>
-            <h1>Josh Mejia</h1>
+            <h1>JXM</h1>
             <hr className="left" />
             <p>
               Over twelve years experience in personal training, nutritional
