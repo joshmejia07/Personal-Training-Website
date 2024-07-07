@@ -199,6 +199,8 @@
   font-weight: 600;
   border: 2px solid var(--accent);
   border-radius: 25px;
+  height: 2.2rem;
+  font-size: 0.9rem;
   width: 7rem;
   padding: 0.5rem 1rem;
 }

@@ -15,7 +15,7 @@ export default function Home() {
       <Programs />
       <Pricing />
       <Banner />
-      <Success />
+      {/* <Success /> */}
       <Products />
       <Contact />
     </>

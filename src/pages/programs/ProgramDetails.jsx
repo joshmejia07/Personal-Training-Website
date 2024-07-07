@@ -28,7 +28,7 @@ export default function ProgramDetails({
           <BsStarFill className="star-big" />
           <BsStarFill className="star-big" />
           <BsStarFill className="star-big" />
-          <BsStarFill className="star-big" />{" "}
+          <BsStarFill className="star-big" />
           <span className="review-count">1547 reviews</span>
         </div>
         {perks.map(perk => (
@@ -55,7 +55,7 @@ export default function ProgramDetails({
 
         <div className="in-person-heading">
           <h2>
-            Supercharge your results with{" "}
+            Supercharge your results with
             <span className="text-colored">in person</span> training
           </h2>
         </div>

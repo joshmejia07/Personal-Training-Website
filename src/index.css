@@ -19,6 +19,10 @@
   color: var(--accent);
 }
 
+.text-white {
+  color: #fff;
+}
+
 body {
   font-family: "Inter", sans-serif;
   margin: 0;
@@ -112,7 +116,7 @@ header {
   background-color: #1e1e1e;
   width: 100%;
   display: flex;
-  padding: 10px;
+  padding: 10px 20px;
   align-items: center;
   overflow: hidden;
   gap: 1rem;
@@ -122,9 +126,8 @@ header {
 }
 
 header .site-logo {
+  width: 8rem;
   margin-right: auto;
-  color: #fff;
-  font-size: var(--fs-600);
   font-family: "Karla";
 }
 
@@ -217,7 +220,7 @@ header .shop-btn {
     url(assets/images/hero-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: -250px;
+  background-position: -80px;
 }
 
 .hero-text-container h4,
@@ -415,7 +418,6 @@ button {
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-  /* align-items: center; */
 }
 
 .contact-inputs input,
