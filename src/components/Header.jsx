@@ -49,7 +49,7 @@ export default function Header({ calcCartItems }) {
 
   return (
     <>
-      <header>
+      <div className="header">
         <Link
           to="/"
           className="site-logo"
@@ -88,7 +88,7 @@ export default function Header({ calcCartItems }) {
             <IoMenuOutline className="menu-btn" onClick={showMenu} />
           </Link>
         ) : null}
-      </header>
+      </div>
       <NavMenu />
     </>
   )

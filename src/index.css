@@ -113,7 +113,7 @@ hr.center {
 
 /* HEADER */
 
-header {
+.header {
   background-color: #1e1e1e;
   width: 100%;
   display: flex;
@@ -126,19 +126,19 @@ header {
   z-index: 100;
 }
 
-header .site-logo {
+.header .site-logo {
   width: 8rem;
   margin-right: auto;
   font-family: "Karla";
 }
 
-header .menu-btn {
+.header .menu-btn {
   color: #fff;
   width: 2rem;
   height: 2rem;
 }
 
-header .shop-btn {
+.header .shop-btn {
   color: #fff;
   width: 1.5rem;
   height: 1.5rem;
