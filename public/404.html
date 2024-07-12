@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="refresh" content="0; URL=./index.html" />
-    <script>
-      document.location.href =
-        "/index.html?" + document.location.pathname.substring(1)
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // Redirect to index.html while preserving the path
+      var pathname = window.location.pathname
+      if (pathname !== "/index.html") {
+        window.location.replace("/index.html?" + pathname)
+      }
     </script>
   </head>
-  <body></body>
+  <body>
+    <p>
+      If you are not redirected automatically, follow this
+      <a href="./index.html">link to example</a>.
+    </p>
+  </body>
 </html>
