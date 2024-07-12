@@ -31,7 +31,9 @@ export default function Product({
       <Link to="/shop" className="shop-link">
         Back to shop
       </Link>
-      <img src={item.img} className="product-page-img" />
+      <div className="product-img-container">
+        <img src={item.img} className="product-page-img" />
+      </div>
       <h1>{item.productName}</h1>
       <h4>{item.brand}</h4>
       <span>{item.category}</span>

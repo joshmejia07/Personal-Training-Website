@@ -97,8 +97,14 @@ a {
 
 /* PRODUCT PAGE */
 
+.product-img-container {
+  display: flex;
+  justify-content: center;
+  /* max-width: 950px; */
+}
+
 .product-page-img {
-  width: 95%;
+  max-width: 350px;
   margin-top: 3rem;
 }
 
@@ -310,6 +316,11 @@ a {
 }
 
 @media (min-width: 48em) {
+  /* .product-img-container {
+    display: flex;
+    justify-content: center;
+  } */
+
   .shop-grid {
     --column-count: 3;
   }
