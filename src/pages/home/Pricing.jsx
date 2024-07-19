@@ -9,7 +9,7 @@ export default function Pricing() {
     return (
       <div key={id} className="card">
         <div className="img-container">
-          <img src={img} className="card-img" alt={name} />
+          <img src={img} className="card-img" alt={name} loading="lazy" />
           <h1 className="text-overlay">{name}</h1>
         </div>
         <div className="card-info">

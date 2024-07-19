@@ -23,6 +23,7 @@ export default function Products() {
                 className="product-img"
                 src={lacrosseBall}
                 alt="Lacrosse ball"
+                loading="lazy"
               />
             </Link>
             <h5>Lacrosse Ball</h5>
@@ -31,14 +32,24 @@ export default function Products() {
 
           <div className="products-grid-item">
             <Link to="shop/7">
-              <img className="product-img" src={jumpRope} alt="Jump Rope" />
+              <img
+                className="product-img"
+                src={jumpRope}
+                alt="Jump Rope"
+                loading="lazy"
+              />
             </Link>
             <h5>Jump Rope</h5>
             <p>$15</p>
           </div>
           <div className="products-grid-item">
             <Link to="shop/1">
-              <img className="product-img" src={protein} alt="Protein Powder" />
+              <img
+                className="product-img"
+                src={protein}
+                alt="Protein Powder"
+                loading="lazy"
+              />
             </Link>
             <h5>Protein Powder</h5>
             <p>$50</p>
@@ -46,7 +57,12 @@ export default function Products() {
 
           <div className="products-grid-item">
             <Link to="shop/3">
-              <img className="product-img" src={creatine} alt="Pre-Workout" />
+              <img
+                className="product-img"
+                src={creatine}
+                alt="Pre-Workout"
+                loading="lazy"
+              />
             </Link>
             <h5>Creatine</h5>
             <p>$30</p>

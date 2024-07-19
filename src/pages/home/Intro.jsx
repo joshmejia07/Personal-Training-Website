@@ -21,7 +21,7 @@ export default function Intro() {
             </p>
           </div>
           <div className="child">
-            <img src={squatRack} alt="squat rack" />
+            <img src={squatRack} alt="squat rack" loading="lazy" />
           </div>
         </div>
       </div>

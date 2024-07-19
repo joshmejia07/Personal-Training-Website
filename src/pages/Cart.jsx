@@ -43,7 +43,7 @@ export default function Cart({
       <div key={id}>
         <div className="cart-item">
           <div>
-            <img src={img} className="cart-item-img" />
+            <img src={img} className="cart-item-img" loading="lazy" />
           </div>
           <div className="cart-item-info">
             <h4>{name}</h4>
